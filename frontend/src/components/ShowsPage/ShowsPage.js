@@ -1,45 +1,24 @@
 import React from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
 
-const ShowsPage = () => {
-    // Define your rankList array here
-    const rankList = [
-        {
-            rank: 1,
-            name: "Breaking Bad",
-            posterUrl: "https://i.pinimg.com/564x/b5/da/81/b5da816660ec3f7c2394e26b2671c9f3.jpg",
-            hours: 266,
-        },
-        {
-            rank: 2,
-            name: "Game of Thrones",
-            hours: 266,
-        },
-        {
-            rank: 3,
-            name: "Stranger Things",
-            hours: 266,
-        },
-        {
-            rank: 4,
-            name: "The Mandalorian",
-            hours: 266,
-        },
-        {
-            rank: 5,
-            name: "The Crown",
-            hours: 266,
-        },
-    ];
+const ShowsPage = (data) => {
 
     return (
+      <div>
+        <Player
+              autoplay
+              loop
+              src={require("../../images/lottie/slide1.json")}
+              style={{ height: '100%', width: '100%', position: 'absolute' }}
+            />
         <div className="wrapper">
             <div className='main-box'>
                 <div className="shows-details">
                     <div className="poster-container">
                         <img
                             className="poster"
-                            src={rankList[0].posterUrl}
-                            alt={`${rankList[0].name} Poster`}
+                            src={data.data.data[0].posterUrl}
+                            alt={`${data.data.data[0].name} Poster`}
                         />
                         <div className="crown-icon">
                             <img src="https://static.vecteezy.com/system/resources/previews/001/189/666/non_2x/crown-png.png" alt="Crown" />
@@ -50,7 +29,7 @@ const ShowsPage = () => {
                             <p>Breaking Bad</p>
                         </div>
                         <div className="hours-spent">
-                            <p><span className="hours-label">{rankList[0].hours} hrs</span> in the past year</p>
+                            <p><span className="hours-label">{data.data.data[0].hours} hrs</span> in the past year</p>
                         </div>
                         <div className='shows-description'>
                             <p>Mild-mannered high school chemistry teacher Walter White thinks his life can't get much worse. His salary barely makes ends meet, a situation not likely to improve once his pregnant wife gives birth, and their teenage son is battling cerebral palsy. </p>
@@ -58,7 +37,7 @@ const ShowsPage = () => {
                     </div>
                 </div>
                 <div className="rank-list">
-                    {rankList.map((item) => (
+                    {data.data.data.map((item) => (
                         <div className="rank-item" key={item.rank}>
                             <span className="rank">{item.rank}.</span>
                             <span className="name">{item.name}</span>
@@ -71,6 +50,7 @@ const ShowsPage = () => {
                 <p>Holder</p>
             </div>
         </div>
+      </div>
 
     );
 }

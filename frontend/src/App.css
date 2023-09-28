@@ -36,6 +36,7 @@
   flex-direction: row;
   min-height: 100vh;
   background-color: #23272A;
+  min-width: 100vw;
 }
 
 .page-title {

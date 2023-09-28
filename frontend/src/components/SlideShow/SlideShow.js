@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Genres from '../Genres/Genres.js';
+import ShowsPage from '../ShowsPage/ShowsPage.js';
 
 import Components from "./components.js";
 import './slideShow.css';
@@ -35,19 +37,54 @@ const SlideShow = () => {
   const [index, setIndex] = React.useState(0);
   // const leftPress = useKeyPress("ArrowLeft");
   // const rightPress = useKeyPress("ArrowRight");
-  // const timeoutRef = React.useRef(null);
+  const timeoutRef = React.useRef(null);
 
-  // const  resetTimeout = () => {
-  //   if (timeoutRef.current) {
-  //     clearTimeout(timeoutRef.current);
-  //   }
-  // }
+  const  resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
 
   function onKeyPress(e) {
     console.log("what jey was presedeff", e.key);
   }
 
-  const data = [{
+  const data = [
+  {
+    id: 'showsPage',
+    backgroundColor: "#00C49F",
+    component: "showsPage",
+    headline: "ShowsPage",
+    data: [
+      {
+          rank: 1,
+          name: "Breaking Bad",
+          posterUrl: "https://i.pinimg.com/564x/b5/da/81/b5da816660ec3f7c2394e26b2671c9f3.jpg",
+          hours: 266,
+      },
+      {
+          rank: 2,
+          name: "Game of Thrones",
+          hours: 266,
+      },
+      {
+          rank: 3,
+          name: "Stranger Things",
+          hours: 266,
+      },
+      {
+          rank: 4,
+          name: "The Mandalorian",
+          hours: 266,
+      },
+      {
+          rank: 5,
+          name: "The Crown",
+          hours: 266,
+      },
+  ]
+  },
+  {
     backgroundColor: "#0088FE",
     id: 'genres',
     data: [
@@ -57,30 +94,24 @@ const SlideShow = () => {
     ],
     component: "genres",
     headline: "Genres"
-  },{
-    id: 'mostWatchedMovies',
-    backgroundColor: "#00C49F"
-  },{
-    id: "mostWatchedShows",
-    backgroundColor: "#FFBB28"
   }]
   // const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-  // const delay = 2500;
+  const delay = 2500;
 
-  // React.useEffect(() => {
-  //   resetTimeout();
-  //   timeoutRef.current = setTimeout(
-  //     () =>
-  //       setIndex((prevIndex) =>
-  //         prevIndex === data.length - 1 ? 0 : prevIndex + 1
-  //       ),
-  //     delay
-  //   );
+  React.useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === data.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
 
-  //   return () => {
-  //     resetTimeout();
-  //   };
-  // }, [data.length, index]);
+    return () => {
+      resetTimeout();
+    };
+  }, [data.length, index]);
 
   // useEffect(() => {
   //   if (leftPress) {
@@ -102,27 +133,28 @@ const SlideShow = () => {
   //   }
   // }, [rightPress]);
 
-  useEffect(() => {
-    console.log("erkjgdsjvmfdv")
-    window.addEventListener('keydown', e => {
-     if(e.key === '39'){ //right
-      console.log('You pressed Right')
-     }
+  // useEffect(() => {
+  //   console.log("erkjgdsjvmfdv")
+  //   window.addEventListener('keydown', e => {
+  //    if(e.key === '39'){ //right
+  //     console.log('You pressed Right')
+  //    }
 
-     if(e.key === '37'){ //right
-      console.log('You pressed left')
-     }
-    })
-   }, [])
+  //    if(e.key === '37'){ //right
+  //     console.log('You pressed left')
+  //    }
+  //   })
+  //  }, [])
 
   return (
     <React.Fragment>
       <div className='slideShowContainer'>
         <div className='slideShowSliderContainer' style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
-        {/* {data.map((item, index) => (
-            <div className="slideContainer" key={index} style={{ backgroundColor: item.backgroundColor }}/>
-          ))} */}
-          {data.map((item, index) => Components(item))}
+        {data.map((item, index) => item.id === 'genres' ? <Genres data={item} /> : <ShowsPage data={item} />
+        )}
+          {/* {data.map((item, index) => <div key={index}><Components item={item} /></div>)} */}
+
+
         </div>
       </div>
     </React.Fragment>
