@@ -51,10 +51,11 @@ class RequestHandler(BaseHTTPRequestHandler):
 		try:
 			data = self.rfile.read(int(self.headers["Content-Length"]))
 			sData = str(data, 'utf-8')
-
+			print("Read data len: " + str(len(sData))
 			try:
 				#data = json.loads(sData)
-				data = csv.DictReader(sData)
+				#data = csv.DictReader(sData)
+				tmp = 1 # place holder
 			except Exception as ex:
 				self._error(400, str(ex))
 				return
@@ -76,7 +77,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 						return
 
 					try:
-						result = instance.post(self, urlParts["path"][3:], urlParts["params"], data)
+						result = instance.post(self, urlParts["path"][3:], urlParts["params"], sData)
 					except Exception as ex:
 						self._error(500, str(ex))
 						return
