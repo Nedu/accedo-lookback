@@ -53,7 +53,8 @@ class RequestHandler(BaseHTTPRequestHandler):
 			sData = str(data, 'utf-8')
 
 			try:
-				data = json.loads(sData)
+				#data = json.loads(sData)
+				data = loadCSV(sData)
 			except Exception as ex:
 				self._error(400, str(ex))
 				return
