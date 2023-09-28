@@ -1,46 +1,54 @@
 import React from 'react';
 
-const ShowsPage = () => {
+const MoviesPage = () => {
     // Define your rankList array here
     const rankList = [
         {
             rank: 1,
-            name: "Breaking Bad",
-            posterUrl: "https://i.pinimg.com/564x/b5/da/81/b5da816660ec3f7c2394e26b2671c9f3.jpg",
-            hours: 266,
-            description: "Mild-mannered high school chemistry teacher Walter White thinks his life can't get much worse. His salary barely makes ends meet, a situation not likely to improve once his pregnant wife gives birth, and their teenage son is battling cerebral palsy."
+            name: "Inception",
+            posterUrl: "https://i.pinimg.com/564x/96/07/dd/9607ddb58b5a327d7463833da63ce6fd.jpg",
+            hours: 154,
+            description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
         },
         {
             rank: 2,
-            name: "Game of Thrones",
-            hours: 266,
-            description: "Seven noble families fight for control of the mythical land of Westeros."
+            name: "The Dark Knight",
+            posterUrl: "https://example.com/dark-knight-poster.jpg",
+            hours: 140,
+            description: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice."
         },
         {
             rank: 3,
-            name: "Stranger Things",
-            hours: 266,
-            description: "When a young boy disappears, his mother, a police chief, and his friends must confront terrifying supernatural forces in order to get him back."
+            name: "The Shawshank Redemption",
+            posterUrl: "https://example.com/shawshank-redemption-poster.jpg",
+            hours: 142,
+            description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
         },
         {
             rank: 4,
-            name: "The Mandalorian",
-            hours: 266,
-            description: "The travels of a lone bounty hunter in the outer reaches of the galaxy, set after the fall of the Empire and before the rise of the First Order."
+            name: "Pulp Fiction",
+            posterUrl: "https://example.com/pulp-fiction-poster.jpg",
+            hours: 148,
+            description: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
         },
         {
             rank: 5,
-            name: "The Crown",
-            hours: 266,
-            description: "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century."
+            name: "Forrest Gump",
+            posterUrl: "https://example.com/forrest-gump-poster.jpg",
+            hours: 136,
+            description: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75."
         },
     ];
     
 
     return (
         <div className="wrapper">
+            <div className="page-title">
+                <p>Place</p>
+                <p>Holder</p>
+            </div>
             <div className='main-box'>
-            <div className="shows-details">
+                <div className="shows-details">
                     <div className="poster-container">
                         <img
                             className="poster"
@@ -74,13 +82,9 @@ const ShowsPage = () => {
                     ))}
                 </div>
             </div>
-            <div className="page-title">
-                <p>Place</p>
-                <p>Holder</p>
-            </div>
         </div>
 
     );
 }
 
-export default ShowsPage;
+export default MoviesPage;
