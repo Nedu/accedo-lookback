@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+    
 
 const SpecialDate = () => {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        // Programmatically navigate to the "/other" route when the container is clicked
+        navigate('/SlideShow');
+    };
     // Define your viewMinutesInOneDay
     const viewMinutesInOneDay = {
         "Nov 12": 360,
@@ -27,7 +34,7 @@ const SpecialDate = () => {
     }
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" onClick={handleNavigate}>
             <div className="form-container">
                 <div className="special-date-text">
                     <p>You watched more</p>

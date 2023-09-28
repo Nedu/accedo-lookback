@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const WeekdayWeekendPage = () => {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        // Programmatically navigate to the "/other" route when the container is clicked
+        navigate('/SpecialDate');
+    };
     // Define your weekdayVsWeekend
     const weekdayVsWeekend = {
         weekdayInHours: 360,
@@ -11,7 +19,7 @@ const WeekdayWeekendPage = () => {
     const weekendPercentage = ((weekdayVsWeekend.weekendInHours / totalHours) * 100).toFixed(0);
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" onClick={handleNavigate}>
             <div className="weekday-weekend">
                 <div className='weekday'>
                     <p>{weekdayPercentage}%</p>

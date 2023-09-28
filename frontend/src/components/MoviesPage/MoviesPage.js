@@ -5,7 +5,7 @@ const MoviesPage = () => {
     const navigate = useNavigate();
     const handleNavigate = () => {
         // Programmatically navigate to the "/other" route when the container is clicked
-        navigate('/SlideShow');
+        navigate('/WeekdayWeekendPage');
     };
     // Define your rankList array here
     const rankList = [
