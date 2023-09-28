@@ -5,6 +5,7 @@ import Landing from './components/Landing/Landing';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import UploadPage from './components/UploadPage/UploadPage';
 import ShowsPage from './components/ShowsPage/ShowsPage'
+import MoviesPage from './components/MoviesPage/MoviesPage'
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/dashboard" element={<Home />} />
           <Route exact path="/uploadPage" element={<UploadPage />} />
           <Route exact path="/showsPage" element={<ShowsPage />} />
+          <Route exact path="/moviesPage" element={<MoviesPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
     </React.Fragment>
