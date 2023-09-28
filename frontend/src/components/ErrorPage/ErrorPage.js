@@ -1,33 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import './errorPage.css'
 
-const ErrorPageContainer = styled.div`
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-const ErrorPageTitle = styled.h1`
-  margin: 0;
-  font-family: Orbitron;
-  font-size: 70px;
-  font-style: italic;
-  font-variant: small-caps;
-  font-weight: 700;
-  color: #00b9bc;
-`;
-
-
-const Home = () => {
+const ErrorPage = () => {
     return (
         <React.Fragment>
-          <ErrorPageContainer>
-              <ErrorPageTitle>Something went wrong</ErrorPageTitle>
-          </ErrorPageContainer>
+          <div className='errorPageContainer'>
+              <h1 className='errorPageTitle'>Something went wrong</h1>
+          </div>
         </React.Fragment>
     );
 };
 
-export default Home;
+export default ErrorPage;
