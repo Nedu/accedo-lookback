@@ -1,0 +1,17 @@
+.errorPageContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.errorPageTitle {
+  margin: 0;
+  font-family: Orbitron;
+  font-size: 70px;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 700;
+  color: #00b9bc;
+}

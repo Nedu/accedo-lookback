@@ -1,0 +1,16 @@
+.slideShowContainer {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slideShowSliderContainer {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slideContainer {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  height: 100vh;
+}

@@ -1,25 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components';
+import { Player } from '@lottiefiles/react-lottie-player';
 
-const LandingContainer = styled.div`
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`;
-
-const LandingTitle = styled.h1`
-  margin: 0;
-  font-family: Orbitron;
-  font-size: 70px;
-  font-style: italic;
-  font-variant: small-caps;
-  font-weight: 700;
-  color: #00b9bc;
-`;
-
+import './landing.css';
 
 const Landing = () => {
   const navigate = useNavigate()
@@ -27,15 +10,20 @@ const Landing = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate('/dashboard')
-    }, 5000)
+    }, 4000)
   }, [navigate])
 
   return (
       <React.Fragment>
-        <LandingContainer>
+        <div className='landingContainer'>
             {/* TODO: Replace with animated logo when ready */}
-            <LandingTitle>Accedo Look-back Landing Page</LandingTitle>
-        </LandingContainer>
+            <Player
+              autoplay
+              loop
+              src={require("../../images/lottie/lookbacklogo.json")}
+              style={{ width: '800px' }}
+            />
+        </div>
       </React.Fragment>
   );
 };
