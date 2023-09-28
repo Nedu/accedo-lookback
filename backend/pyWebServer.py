@@ -1,4 +1,4 @@
-import os, sys, json, re, glob, time, argparse
+import os, sys, json, re, glob, time, argparse, csv
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import importlib
 from urllib import parse
@@ -54,7 +54,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
 			try:
 				#data = json.loads(sData)
-				data = loadCSV(sData)
+				data = csv.DictReader(sData)
 			except Exception as ex:
 				self._error(400, str(ex))
 				return
