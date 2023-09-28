@@ -8,6 +8,7 @@ import UploadPage from './components/UploadPage/UploadPage'
 import SlideShow from './components/SlideShow/SlideShow';
 import ShowsPage from './components/ShowsPage/ShowsPage'
 import MoviesPage from './components/MoviesPage/MoviesPage'
+import WeekdayWeekendPage from './components/WeekdayWeekendPage/WeekdayWeekendPage'
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/slideshow" element={<SlideShow />} />
           <Route exact path="/showsPage" element={<ShowsPage />} />
           <Route exact path="/moviesPage" element={<MoviesPage />} />
+          <Route exact path="/WeekdayWeekendPage" element={<WeekdayWeekendPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
     </React.Fragment>
