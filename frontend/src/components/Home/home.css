@@ -1,0 +1,48 @@
+.homeContainer {
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.logo {
+  width: 350px;
+}
+
+.homeTitle {
+  margin: 0;
+  font-family: Orbitron;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 700;
+  color: #00b9bc;
+}
+
+.subTitle {
+  margin: 0;
+  font-family: Orbitron;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 700;
+  color: #00b9bc;
+}
+
+.actionButton {
+  font-family: Orbitron;
+  font-size: 70px;
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 700;
+  color: #fff;
+  background: #00b9bc;
+  border: 1px solid #00b9bc;
+  border-radius: 50px;
+  padding: 30px;
+  margin-top: 24px;
+  cursor: pointer;
+}

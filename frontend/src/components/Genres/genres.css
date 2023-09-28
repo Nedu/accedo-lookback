@@ -1,0 +1,12 @@
+.genreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background: #0088FE;
+}
+
+.pieContainer {
+  width: 50%;
+}
