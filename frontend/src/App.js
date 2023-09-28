@@ -6,6 +6,8 @@ import Landing from './components/Landing/Landing';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import UploadPage from './components/UploadPage/UploadPage'
 import SlideShow from './components/SlideShow/SlideShow';
+import ShowsPage from './components/ShowsPage/ShowsPage'
+
 import './App.css';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
           <Route exact path="/dashboard" element={<Home />} />
           <Route exact path="/uploadPage" element={<UploadPage />} />
           <Route exact path="/slideshow" element={<SlideShow />} />
+          <Route exact path="/showsPage" element={<ShowsPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
     </React.Fragment>
