@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function UploadPage() {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        // Programmatically navigate to the "/other" route when the container is clicked
+        navigate('/showsPage');
+    };
     return (
         <div className="wrapper">
             <div className="content">
@@ -13,7 +20,7 @@ function UploadPage() {
                 <div className="form-container">
                     <form>
                         <input type={"file"} accept={".csv"} />
-                        <button className="custom-button">IMPORT CSV</button>
+                        <button className="custom-button" onClick={handleNavigate}>IMPORT CSV</button>
                     </form>
                 </div>
                 <p className="note">

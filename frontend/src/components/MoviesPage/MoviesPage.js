@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MoviesPage = () => {
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        // Programmatically navigate to the "/other" route when the container is clicked
+        navigate('/SlideShow');
+    };
     // Define your rankList array here
     const rankList = [
         {
@@ -42,7 +48,7 @@ const MoviesPage = () => {
     
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" onClick={handleNavigate}>
             <div className="page-title">
                 <p>Place</p>
                 <p>Holder</p>
