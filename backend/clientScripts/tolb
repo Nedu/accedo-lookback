@@ -1,0 +1,2 @@
+#!/bin/bash
+scp -i ~/.ssh/accedo-lookback.pem $1 ubuntu@35.171.9.174:$2

@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# -eq 0 ] ; then
+  ps -ef | grep " pySocketServer\\.py " | grep -v grep
+else
+  ps -ef | grep " pySocketServer\\.py .*--port $1$" | grep -v grep
+fi
