@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -eq 0 ] ; then
+  echo "Killing pyWebServer.py on all ports"
+  kill -9 $(ps -ef | grep " pyWebServer\\.py " | grep -v grep | awk '{ print $2 }') >/dev/null 2>&1
+else
+  echo "Killing pyWebServer.py on port $1"
+  kill -9 $(ps -ef | grep " pyWebServer\\.py .*--port $1$" | grep -v grep | awk '{ print $2 }') >/dev/null 2>&1
+fi

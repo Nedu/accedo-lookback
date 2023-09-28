@@ -1,0 +1,1 @@
+ssh -i  ~/.ssh/accedo-lookback.pem ubuntu@35.171.9.174
