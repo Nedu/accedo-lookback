@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ShowsPage = () => {
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        // Programmatically navigate to the "/other" route when the container is clicked
+        navigate('/moviesPage');
+    };
     // Define your rankList array here
     const rankList = [
         {
@@ -35,12 +42,12 @@ const ShowsPage = () => {
             description: "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century."
         },
     ];
-    
+
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" onClick={handleNavigate}>
             <div className='main-box'>
-            <div className="shows-details">
+                <div className="shows-details">
                     <div className="poster-container">
                         <img
                             className="poster"
