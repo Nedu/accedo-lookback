@@ -33,9 +33,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   min-height: 100vh;
   background-color: #23272A;
 }
+
+.page-title {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 60px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  max-width: 30rem;
+  margin-left: 10rem;
+}
+
+
+.main-box {
+  background-color: rgba(37, 78, 219, 0.2);
+  border-radius: 5px;
+  box-shadow: 10px -10px 50px 40px rgba(37, 78, 219, 0.2);
+  max-width: 40rem;
+}
+
 
 .content {
   background-color: #FFFFFF;
@@ -53,13 +73,74 @@
 .title {
   font-size: 2rem;
   color: #333;
+  margin: 1rem;
 }
 
-.description {
+.shows-title {
   font-size: 1.5rem;
-  color: #666;
-  margin-top: 1rem;
+  color: white;
+  margin: 1rem;
+  max-width: 90%;
+  font-family: 'Lato', sans-serif;
+  font-weight:bolder;
 }
+
+.shows-description {
+  font-size: 1rem;
+  color: white;
+  margin: 1rem;
+  max-width: 90%;
+  font-family: 'Lato', sans-serif;
+}
+
+.hours-spent {
+  font-size: 1.2rem;
+  color: white;
+  margin: 1rem;
+  max-width: 90%;
+  font-family: 'Lato', sans-serif;
+}
+
+.hours-label {
+  color:#f15f5f;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+};
+
+.rank-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-item {
+  background-color: hsla(54, 83%, 70%, 0.972);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.rank {
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.name {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
 
 .form-container {
   text-align: center;
@@ -92,6 +173,56 @@
   margin-top: 5%;
 }
 
+.poster {
+  max-width: 100%;
+  max-height: 300px;
+  box-shadow:
+    20px 20px 20px #000,
+    inset 10px 10px 10px #000;
+  border-radius: 5px;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.crown-icon {
+  position: absolute;
+  scale: 3;
+  top: 0;
+  left: 2rem;
+  transform: rotate(-35deg);
+}
+
+.crown-icon img {
+  width: 40px;
+  height: auto;
+}
+
+.shows-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-container {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.details-container {
+  flex: 1;
+  padding: 0;
+  width: 50rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Add additional styling for other classes as needed */
+
 /* Add more styles as needed */
 
 
@@ -99,6 +230,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
