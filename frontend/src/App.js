@@ -9,6 +9,7 @@ import SlideShow from './components/SlideShow/SlideShow';
 import ShowsPage from './components/ShowsPage/ShowsPage'
 import MoviesPage from './components/MoviesPage/MoviesPage'
 import WeekdayWeekendPage from './components/WeekdayWeekendPage/WeekdayWeekendPage'
+import SpecialDate from './components/SpecialDate/SpecialDate'
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/showsPage" element={<ShowsPage />} />
           <Route exact path="/moviesPage" element={<MoviesPage />} />
           <Route exact path="/WeekdayWeekendPage" element={<WeekdayWeekendPage />} />
+          <Route exact path="/SpecialDate" element={<SpecialDate />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
     </React.Fragment>

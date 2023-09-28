@@ -45,7 +45,30 @@
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   max-width: 30rem;
-  margin-left: 10rem;
+}
+
+.special-date-text-large {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.special-date-text {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.special-date-mins {
+  text-align: start;
+  color: #FFFFFF;
+  font-size: 80px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -141,8 +164,7 @@
 
 
 .form-container {
-  text-align: center;
-  margin-top: 2rem;
+  max-width: 100%;
 }
 
 .file-input {
