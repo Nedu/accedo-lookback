@@ -51,7 +51,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 		try:
 			data = self.rfile.read(int(self.headers["Content-Length"]))
 			sData = str(data, 'utf-8')
-			print("Read data len: " + str(len(sData))
+			print("Read data len: " + str(len(sData)))
 			try:
 				#data = json.loads(sData)
 				#data = csv.DictReader(sData)
