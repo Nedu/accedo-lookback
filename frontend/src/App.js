@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Landing from './components/Landing/Landing';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import UploadPage from './components/UploadPage/UploadPage'
 
 import './App.css';
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/dashboard" element={<Home />} />
+          <Route exact path="/uploadPage" element={<UploadPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
     </React.Fragment>
