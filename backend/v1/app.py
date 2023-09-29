@@ -5,7 +5,7 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from io import StringIO
 
-class stat(GetHandler):
+class app(GetHandler):
 
 	def get(self, request, path_extra, params):
 		if not (

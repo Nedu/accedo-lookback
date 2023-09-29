@@ -144,8 +144,9 @@ class RequestHandler(BaseHTTPRequestHandler):
 			while name[-1:] == "/":
 				name = name[:-1]
 			if name == "":
-				name = "/index.htm"
+				name = "/index.html"
 			name = os.getcwd() + "/web" + name
+			self._emit("file: " + name)
 			f = open(name, mode='rb')
 			self.send_response(200)
 			if name[-3:].lower() == ".js":
