@@ -14,7 +14,7 @@ class app(GetHandler):
 		):
 			self._outFile(request, ERROR_FILE, {})
 		else:
-			output = "<![CDATA[This is a GET test output ]]>
+			output = "<![CDATA[This is a GET test output ]]>"
 			request.send_response(200)
 			request.send_header("Content-Type", "application/xml; charset=UTF-8")
 			request.end_headers()
