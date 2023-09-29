@@ -27,11 +27,11 @@ class app(GetHandler):
 		rows = []
 		output = ''
 		cnt =m0
-		for each row in csvData :
+		for row in csvData :
 			#rows.append(row)
 			cnt = cnt + 1
 			output = output + json.dumps(row)
-		PRINT "GOT CSV of " + str(len(rows)) + " lines"
+		print("GOT CSV of " + str(len(cnt)) + " lines")
 		request.send_response(200)
 		request.send_header("Content-Type", "application/json; charset=UTF-8")
 		request.end_headers()
